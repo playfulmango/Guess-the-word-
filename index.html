@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word!</title>
+    <link rel="stylesheet" href="style.css">
+</head> <!-- Load the confetti library from a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<body>
+
+    <div class="game-container">
+        <!-- Title & Theme -->
+        <h1>Guess the word!</h1>
+        <p class="theme">Theme: <span id="theme-display">Loading...</span></p>
+
+        <!-- Game Info / Tries -->
+        <p id="tries-display">Tries remaining: <span id="tries-count">6</span></p>
+
+        <!-- Pirate & Stepping Stones Area -->
+        <div class="scene">
+            <div id="pirate">🏴‍☠️</div>
+            <div id="stepping-stones" class="stones-container"></div>
+            <div id="island">🏝️ 🏆</div>
+        </div>
+
+        <!-- Input Box & Submit Button -->
+        <div class="input-area">
+            <input type="text" id="guess-input" maxlength="1" placeholder="Type a letter">
+            <button id="guess-btn">Guess!</button>
+        </div>
+
+        <!-- Win/Lose Message Area -->
+        <div id="message-display"></div>
+
+        <!-- Lava Danger Area -->
+        <div id="lava-container">
+            <div id="lava">🌋 LAVA 🌋</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
